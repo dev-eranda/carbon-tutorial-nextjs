@@ -13,8 +13,8 @@ import {
 
 const octokitClient = new Octokit({});
 
-const LinkList = ({ url, homepageUrl }) => {
-  <ul>
+const LinkList = ({ url, homepageUrl }) => (
+  <ul style={{ display: 'flex' }}>
     <li>
       <Link href={url}>GitHub</Link>
     </li>
@@ -24,8 +24,8 @@ const LinkList = ({ url, homepageUrl }) => {
         <Link href={homepageUrl}>Homepage</Link>
       </li>
     )}
-  </ul>;
-};
+  </ul>
+);
 
 const getRowItems = (rows) =>
   rows.map((row) => ({
